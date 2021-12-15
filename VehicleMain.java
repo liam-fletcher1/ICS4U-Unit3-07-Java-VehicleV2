@@ -18,14 +18,14 @@ public class VehicleMain {
 
         try {
             // bike colour
-            System.out.println("Enter the colour you wish your bike to be: ");
+            System.out.println("Enter the colour for your bike: ");
             String bcolourChoice = userInput.nextLine();
 
             // bike with colour choice
             Bike userBike = new Bike(bcolourChoice);
 
             // truck colour
-            System.out.println("Enter the colour you wish your truck to be: ");
+            System.out.println("Enter the colour for your truck: ");
             String tcolourChoice = userInput.nextLine();
 
             // truck with colour choice
@@ -38,14 +38,14 @@ public class VehicleMain {
             System.out.println();
 
             //honking horns
-            System.out.println("Honking the horns of the bike and the truck...");
+            System.out.println("Honking the horns of your bike and truck");
             System.out.println();
             System.out.println("Truck: " + userTruck.callHonk());
             System.out.println("Bike: " + userBike.callBell());
             System.out.println();
 
             //riding the bike
-            System.out.println("You go for a bike ride. How fast would you like" +
+            System.out.println("How fast would you like" +
                 " to bike (km/h)");
             float bikeSpeed = userInput.nextFloat();
             userBike.accelerate(bikeSpeed);
@@ -60,14 +60,14 @@ public class VehicleMain {
 
             // slow down
             System.out.println();
-            System.out.println("You begin to decelerate. How many km/h's do you " +
-                "slow down by?: ");
+            System.out.println("How many km/h's do you " +
+                "slow down by on your bike?: ");
             float bikeSlow = userInput.nextFloat();
             userBike.brake(bikeSlow);
 
             // printing speed
             System.out.println("Your current speed: " + userBike.currentSpeed() +
-                " km/h");
+                " km/h on your bike");
 
             // printing cadence
             System.out.println("Current cadence: " + userBike.getCadence() +
@@ -75,29 +75,29 @@ public class VehicleMain {
 
             // begin truck sequence
             System.out.println();
-            System.out.println("You reach your home and begin to drive your truck." +
-                " How much do you accelerate by?");
+            System.out.println("" +
+                " How much do you accelerate by in your truck?");
             float truckSpeed = userInput.nextFloat();
             userTruck.accelerate(truckSpeed);
 
             // printing speed
             System.out.println("You accelerate to " + userTruck.currentSpeed() +
-                " km/h");
+                " km/h in your truch");
 
             // slow down
             System.out.println();
-            System.out.println("You begin to decelerate. How many km/h's do you " +
-                "slow down by?: ");
+            System.out.println("How many km/h's do you " +
+                "slow down by in your truck?: ");
             float truckSlow = userInput.nextFloat();
             userTruck.brake(truckSlow);
 
             // printing speed
             System.out.println("Your current speed: " + userTruck.currentSpeed() +
-                " km/h");
+                " km/h in your truck");
 
             // sequence end
             System.out.println();
-            System.out.println("You arrive back home and stop the truck.");
+            System.out.println("You stop the truck.");
 
             // catch 
         } catch (Exception e) {
